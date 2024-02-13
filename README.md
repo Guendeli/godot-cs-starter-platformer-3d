@@ -4,7 +4,7 @@ Original GDScript project: https://github.com/KenneyNL/Starter-Kit-3D-Platformer
 # Starter Kit 3D Platformer - C# Port
 
 ## Slight differences
-- no signals, but added a GodotEvent class that offers a workflow similar to UnityEvents
+- no custom signals, but added a GodotEvent class that offers a workflow similar to UnityEvents
 - instead of adding signals from the editor inspector, added them through code.
 - Magic strings as constants
 
