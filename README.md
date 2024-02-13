@@ -1,8 +1,12 @@
 <p align="center"><img src="icon.png"/></p>
 
-# Starter Kit 3D Platformer
+Originql GDScript project: https://github.com/KenneyNL/Starter-Kit-3D-Platformer
+# Starter Kit 3D Platformer - C# Port
 
-This package includes a basic template for a 3D platformer game in Godot 4.1.1.stable.official. Includes features like;
+## Notable differences
+- no signals, but added a GodotEvent class that offers a workflow similar to UnityEvents
+
+This package includes a basic template for a 3D platformer game in Godot 4.2.stable.official. Includes features like;
 
 - Character controller (with double jump)
 - Collectable coins and falling platforms
