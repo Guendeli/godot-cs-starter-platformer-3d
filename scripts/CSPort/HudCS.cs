@@ -15,7 +15,8 @@ public partial class HudCS : CanvasLayer
 
 	public void OnCoinCollected(int coins)
 	{
-		if(_coinsText != null)
+		// TODO - Figure out this crash after ReloadCurrentScene() is called
+		if(_coinsText != null && IsInstanceValid(_coinsText))
 			_coinsText.Text = coins.ToString();
 	}
 
