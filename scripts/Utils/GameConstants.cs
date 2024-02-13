@@ -10,7 +10,7 @@
     public const string AUDIO_BUS = "master";
     public const string SFX_JUMP = "res://sounds/jump.ogg";
     public const string SFX_COIN = "res://sounds/coin.ogg";
-    public const string SFX_FALL = "";
+    public const string SFX_FALL = "res://sounds/fall.ogg";
 
     #endregion
 
