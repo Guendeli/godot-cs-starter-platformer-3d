@@ -5,6 +5,8 @@ Original GDScript project: https://github.com/KenneyNL/Starter-Kit-3D-Platformer
 
 ## Slight differences
 - no signals, but added a GodotEvent class that offers a workflow similar to UnityEvents
+- instead of adding signals from the editor inspector, added them through code.
+- Magic strings as constants
 
 This package includes a basic template for a 3D platformer game in Godot 4.2.stable.official. Includes features like;
 
