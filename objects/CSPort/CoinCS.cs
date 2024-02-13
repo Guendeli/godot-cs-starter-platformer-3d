@@ -23,7 +23,7 @@ public partial class CoinCS : Area3D
 		{
 			// body.CollectCoin
 			collectorUser.Collect();
-			AudioCS.Instance.Play("res://sounds/coin.ogg");
+			AudioCS.Instance.Play(GameConstants.SFX_COIN);
 
 			_mesh.QueueFree();
 			_particleEmitter.Emitting = false;

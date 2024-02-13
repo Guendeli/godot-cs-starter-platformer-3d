@@ -7,7 +7,6 @@ using Godot.Collections;
 public partial class AudioCS : Node
 {
 	private int _numPlayers = 12;
-	private const string BUS = "master";
 	private static AudioCS _instance;
 	
 	public static AudioCS Instance => _instance;
@@ -32,6 +31,7 @@ public partial class AudioCS : Node
 			AddChild(p);
 
 			p.VolumeDb = -10;
+			p.Bus = GameConstants.AUDIO_BUS;
 			p.Finished += () =>
 			{
 				_available.Add(p);

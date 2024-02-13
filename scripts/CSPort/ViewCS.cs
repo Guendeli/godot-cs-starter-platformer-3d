@@ -45,12 +45,12 @@ public partial class ViewCS : Node3D
 	{
 		Vector3 input = Vector3.Zero;
 
-		input.X = Input.GetAxis("camera_up", "camera_down");
-		input.Y = Input.GetAxis("camera_left", "camera_right");
+		input.X = Input.GetAxis(GameConstants.INP_AXIS_CAM_UP, GameConstants.INP_AXIS_CAM_DOWN);
+		input.Y = Input.GetAxis(GameConstants.INP_AXIS_CAM_LEFT, GameConstants.INP_AXIS_CAM_RIGHT);
 
 		_cameraRotation += input.LimitLength(1.0f) * RotationSpeed * delta;
 
-		_zoom += Input.GetAxis("zoom_in", "zoom_out") * ZoomSpeed * delta;
+		_zoom += Input.GetAxis(GameConstants.INP_AXIS_ZOOM_IN, GameConstants.INP_AXIS_ZOOM_OUT) * ZoomSpeed * delta;
 
 		_zoom = Mathf.Clamp(_zoom, MinZoom, MaxZoom);
 	}

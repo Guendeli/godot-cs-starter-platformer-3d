@@ -15,7 +15,8 @@ public partial class HudCS : CanvasLayer
 
 	public void OnCoinCollected(int coins)
 	{
-		_coinsText.Text = coins.ToString();
+		if(_coinsText != null)
+			_coinsText.Text = coins.ToString();
 	}
 
 	public override void _ExitTree()

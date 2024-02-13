@@ -21,7 +21,7 @@ public partial class FallingPlatform : Node3D
 	{
 		if (!_falling)
 		{
-			AudioCS.Instance.Play("res://sounds/fall.ogg");
+			AudioCS.Instance.Play(GameConstants.SFX_FALL);
 			Scale = new Vector3(1.25f, 1, 1.25f);
 		}
 

@@ -29,7 +29,6 @@ public partial class PlayerCS : CharacterBody3D, ICollectUser
 	private AudioStreamPlayer _audioSource;
 	private CpuParticles3D _trail;
 	
-	private const string FOOTSTEPS_SFX = "res://sounds/jump.ogg";
 	private const string ANIM_WALK = "walk";
 	private const string ANIM_IDLE = "idle";
 	private const string ANIM_JUMP = "jump";
@@ -91,20 +90,20 @@ public partial class PlayerCS : CharacterBody3D, ICollectUser
 	{
 		// Movement
 		var input = Vector3.Zero;
-		input.X = Input.GetAxis("move_left", "move_right");
-		input.Z = Input.GetAxis("move_forward", "move_back");
+		input.X = Input.GetAxis(GameConstants.INP_AXIS_MOVE_LEFT, GameConstants.INP_AXIS_MOVE_RIGHT);
+		input.Z = Input.GetAxis(GameConstants.INP_AXIS_MOVE_FWRD, GameConstants.INP_AXIS_MOVE_BACK);
 
 		//input = input.Rotated(Vector3.Up, View.Rotation.Y).Normalized();
 		
 		_movementVelocity = View.Basis * input * MoveSpeed * delta;
 		
 		// Jumping
-		if (Input.IsActionJustPressed("jump"))
+		if (Input.IsActionJustPressed(GameConstants.INP_ACTION_JUMP))
 		{
 			if (_currentJumps <= 0)
 				return;
 
-			AudioCS.Instance.Play(FOOTSTEPS_SFX);
+			AudioCS.Instance.Play(GameConstants.SFX_JUMP);
 
 			Jump();
 		}
