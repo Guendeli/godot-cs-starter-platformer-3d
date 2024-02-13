@@ -1,9 +1,9 @@
 <p align="center"><img src="icon.png"/></p>
 
-Originql GDScript project: https://github.com/KenneyNL/Starter-Kit-3D-Platformer
+Original GDScript project: https://github.com/KenneyNL/Starter-Kit-3D-Platformer
 # Starter Kit 3D Platformer - C# Port
 
-## Notable differences
+## Slight differences
 - no signals, but added a GodotEvent class that offers a workflow similar to UnityEvents
 
 This package includes a basic template for a 3D platformer game in Godot 4.2.stable.official. Includes features like;
